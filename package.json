@@ -1,0 +1,28 @@
+{
+  "name": "local-magpie",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": { "zh": "本地 magpie", "en": "Local magpie" },
+    "icon": "server",
+    "contributes": {
+      "composer.strip": [
+        { "id": "magpie-status", "icon": "server", "text": "magpie 未安装", "panel": "magpie" }
+      ],
+      "panels": [
+        { "id": "magpie", "title": { "zh": "magpie 网关", "en": "magpie" }, "icon": "server", "placement": ["session.tab", "features"] }
+      ]
+    }
+  }
+}
